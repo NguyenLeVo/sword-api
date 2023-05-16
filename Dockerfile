@@ -14,4 +14,4 @@ RUN npm install
 COPY . .
 
 ## Launch the wait tool and then your application
-CMD /wait && npm run start
+CMD /wait && npm run seed && npm run start

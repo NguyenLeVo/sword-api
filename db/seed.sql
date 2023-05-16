@@ -1,8 +1,8 @@
 CREATE DATABASE IF NOT EXISTS `sword-api-db`;
 USE `sword-api-db`;
 
-DROP TABLE Tasks;
-DROP TABLE Roles;
+DROP TABLE IF EXISTS Tasks;
+DROP TABLE IF EXISTS Roles;
 
 CREATE TABLE Roles (
     ID varchar(128) PRIMARY KEY,
