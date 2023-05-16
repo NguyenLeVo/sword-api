@@ -1,6 +1,9 @@
+require("dotenv").config();
+
 module.exports = {
-  HOST: "localhost",
-  USER: "root",
-  PASSWORD: "12345678",
-  DB: "sword-api-db",
+  HOST: process.env.DB_HOST,
+  USER: process.env.DB_USER,
+  PASSWORD: process.env.DB_PASSWORD,
+  DB: process.env.DB_NAME,
+  port: process.env.DB_DOCKER_PORT
 };
