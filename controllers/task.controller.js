@@ -1,4 +1,4 @@
-const v4 = require('uuid');
+const { uuid } = require('uuidv4');
 const Task = require("../models/task.model.js");
 
 // Create and Save a new Task
@@ -12,7 +12,7 @@ exports.create = (req, res) => {
 
   // Create a Task
   const task = new Task({
-    ID: v4(),
+    ID: uuid(),
     PerformedByID: req.body.PerformedByID,
     Summary: req.body.Summary,
     SubmitDate: new Date().toISOString().slice(0, 19).replace('T', ' '),
