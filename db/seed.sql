@@ -23,6 +23,6 @@ INSERT INTO Roles (ID, FirstName, LastName, CurrentRole) VALUES ('4be6ac58-f3e0-
 INSERT INTO Roles (ID, FirstName, LastName, CurrentRole) VALUES ('4be6f488-f3e0-11ed-8d73-b3ef9725f25a', 'Manager', 'John', 'Manager');
 
 INSERT INTO Tasks (ID, PerformedByID, Summary, SubmitDate) 
-VALUES ('4be6ac58-f3e0-11ed-8d73-b3ef9725f25b', '4be6ac58-f3e0-11ed-8d73-b3ef9725f24f', 'First Task Created', '2023-05-15 11:22:15 UTC');
+VALUES ('4be6ac58-f3e0-11ed-8d73-b3ef9725f25b', '4be6ac58-f3e0-11ed-8d73-b3ef9725f24f', 'First Task Created', '2023-05-15 11:22:15');
 INSERT INTO Tasks (ID, PerformedByID, Summary, SubmitDate) 
-VALUES ('4be6ac58-f3e0-11ed-8d73-b3ef9725f25c', '4be6ac58-f3e0-11ed-8d73-b3ef9725f24f', 'Second Task Created', '2023-05-15 11:22:30 UTC');
+VALUES ('4be6ac58-f3e0-11ed-8d73-b3ef9725f25c', '4be6ac58-f3e0-11ed-8d73-b3ef9725f24f', 'Second Task Created', '2023-05-15 11:22:30');

@@ -21,7 +21,9 @@ services:
   server:
     depends_on: 
       - mysqldb
-    build: .
+    build: 
+      context: .
+      dockerfile: ./test/Test.Dockerfile
     restart: always
     env_file: ./.env
     ports:
