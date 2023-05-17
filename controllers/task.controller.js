@@ -18,13 +18,26 @@ exports.create = (req, res) => {
     SubmitDate: new Date().toISOString().slice(0, 19).replace('T', ' '),
   });
 
+  /*
+   * This is a dummy function that represents sending a notification to the manager.
+   * What it should be doing is sending a POST message to SQS (Simple Queue Service) or any equivalent service (Kafka, etc.)
+   * and let the message broker handle the burden. Since I've spent quite some time on setting up the service, I'm just 
+   * console logging at this point. Thanks for understanding
+   */
+  function sendNotification(data) {
+    console.log(`Employee ${data.PerformedByID} has just submitted a Task ${data.ID} on ${data.SubmitDate}`)
+  }
+
   // Save Task in the database
   Task.create(task, (err, data) => {
     if (err)
       res.status(500).send({
         message: err.message || "Some error occurred while creating the Task.",
       });
-    else res.send(data);
+    else {
+      sendNotification(data);
+      res.send(data);
+    }
   });
 };
 
